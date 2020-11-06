@@ -5,8 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void nothing(){}
+
 int main()
 {
+	signal(SIGUSR1, nothing);
+
 	pid_t _fork = fork();
 	if(_fork)
 	{

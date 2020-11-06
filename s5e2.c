@@ -5,8 +5,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void nothing(){}
+
 int main(int arc, char *argv[])
 {
+	signal(SIGUSR1, nothing);
+
 	//Fils
 	printf("\nfils en pause\n");
 	pause();
